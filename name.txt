@@ -1,1 +1,43 @@
-10
+item:
+mã sản phẩm
+tên sản phẩm
+số lượng
+đơn giá
+ngày sản xuất
+hạn sử dụng
+nhà sản xuất
+thành phần tạo thành
+
+order:
+mã đơn hàng
+mã nhân viên
+ngày xuất đơn hàng
+danh sách sản phẩm
+tổng tiền
+
+def bubble_sort(arr):
+  n = len(arr)
+  for i in range(n):
+    swapped = False 
+    for j in range(0, n-i-1):
+      if arr[j][1] < arr[j+1][1]: 
+        arr[j], arr[j+1] = arr[j+1], arr[j]
+        swapped = True
+    if swapped == False:
+      break
+  return arr
+
+music_data = [
+    ["BLACKPINK", 141],
+    ["N'SYNC", 58],
+    ["The Beatles", 20],
+    ["Mariah Carey", 5],
+    ["Bruno Mars", 102]
+]
+
+sorted_music_data = bubble_sort(music_data)
+
+# Print the sorted data
+print("Danh sách ca sĩ yêu thích (theo số lượt nghe giảm dần):")
+for artist, plays in sorted_music_data:
+  print(f"{artist}: {plays} lượt nghe") 

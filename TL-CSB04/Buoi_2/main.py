@@ -9,6 +9,7 @@ a.append("Linh")
 a.insert(0, "Uyen")
 a.append("Huy")
 a.remove("Huy")
+a.pop()
 a.clear()
 
 (len(a) - 1)//2
